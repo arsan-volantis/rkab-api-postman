@@ -1,0 +1,701 @@
+{
+	"info": {
+		"_postman_id": "6fe10c7e-96ea-4fb1-bf46-7e95a0b3b3de",
+		"name": "RKAB-API-Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2793714"
+	},
+	"item": [
+		{
+			"name": "blok-iup",
+			"item": [
+				{
+					"name": "Put Blok Iup",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_iup\":\"1\",\n    \"nama_blok\":\"Blok 2\",\n    \"luas_blok\":\"7Ha\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/blok-iup/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"blok-iup",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2",
+									"description": "ID Blok Iup"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Blok Iup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_iup\":\"1\",\n    \"nama_blok\":\"Blok 3\",\n    \"luas_blok\":\"5\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/blok-iup",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"blok-iup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Blok Iup",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama_blok\":\"Blok 2\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/blok-iup/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"blok-iup",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2",
+									"description": "ID Blok IUP"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch Blok Iup",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama_blok\":\"Blok 2 edit\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/blok-iup/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"blok-iup",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2",
+									"description": "ID Blok IUP"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Blok Iup",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/blok-iup",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"blok-iup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Blok Iup",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/blok-iup/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"blok-iup",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "ID Blok Iup"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Pits By Blok ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/blok-iup/:id/pits",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"blok-iup",
+								":id",
+								"pits"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "pit-blok",
+			"item": [
+				{
+					"name": "Put Pit Blok",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_blok\":\"1\",\n    \"nama_pit\":\"Pit 2 edit\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/pit-blok/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"pit-blok",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "ID Pit Blok"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Pit Blok",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_blok\":\"2\",\n    \"nama_pit\":\"Pit 3\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/pit-blok",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"pit-blok"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Pit Blok",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama_blok\":\"Blok 2\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/pit-blok/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"pit-blok",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2",
+									"description": "ID Pit Blok"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch Pit Blok",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama_pit\":\"Pit 2 edit\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/pit-blok/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"pit-blok",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2",
+									"description": "ID Pit Blok"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Pit Blok",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/pit-blok",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"pit-blok"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Pit Blok",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/pit-blok/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"pit-blok",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2",
+									"description": "ID Pit Blok"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "pengajuan",
+			"item": [
+				{
+					"name": "List Pengajuan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/pengajuan",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"pengajuan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pengajuan By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/pengajuan/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"pengajuan",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "ID Rkab Pengajuan"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Pengajuan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"kode_perusahaan\": 1001,\n    \"nomor_iup\": \"164 TAHUN 2014\",\n    \"tahun_pengajuan\": 2024,\n    \"jenis_tahapan\": \"explorasi\",\n    \"status\": \"draft\",\n    \"mata_uang\": \"rupiah\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/pengajuan",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"pengajuan"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "iup",
+			"item": [
+				{
+					"name": "Create Iup/Iupk",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_perusahaan\":\"1\",\n    \"nomor_iup\": \"889493\",\n    \"kode_iup\": \"XII/992\",\n    \"golongan_tambang\": \"1\",\n    \"periode_iup_awal\": \"2024-04-30\",\n    \"periode_iup_akhir\": \"2029-04-30\",\n    \"kpt_nama\": \"Arsan\",\n    \"kpt_nomor_pengesahan\": \"P00392\",\n    \"kpt_tanggal_pengesahan\": \"2024-04-30\",\n    \"luas_wilayah_hk\": \"20\",\n    \"luas_wilayah_hl\": \"20\",\n    \"luas_wilayah_hp\": \"20\",\n    \"luas_wilayah_nonhutan\": \"20\",\n    \"id_komoditas\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/iup",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"iup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Iup/Iupk",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/iup",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"iup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Blok By Iup ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/iup/:id/bloks",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"iup",
+								":id",
+								"bloks"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "List legalitas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v1/rkab/legalitas",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"rkab",
+						"legalitas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create legalitas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id_perusahaan\":\"1\",\n    \"id_iup\":\"1\",\n    \"luas_project_area\":\"300Ha\",\n    \"id_ippkh\":\"1\",\n    \"id_pemilik\":\"1\",\n    \"id_direksi\":\"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v1/rkab/legalitas",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"rkab",
+						"legalitas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile Perusahaan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v1/rkab/profile-bu/:id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"rkab",
+						"profile-bu",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "{{local}}",
+			"type": "string"
+		},
+		{
+			"key": "local",
+			"value": "http://localhost:8000",
+			"type": "string"
+		},
+		{
+			"key": "staging",
+			"value": "http://34.101.55.237:3002",
+			"type": "string"
+		}
+	]
+}
