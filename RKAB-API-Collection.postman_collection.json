@@ -555,6 +555,33 @@
 					"response": []
 				},
 				{
+					"name": "Get Iup/Iupk By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/iup/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"iup",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "List Blok By Iup ID",
 					"request": {
 						"method": "GET",
@@ -585,53 +612,1802 @@
 			]
 		},
 		{
-			"name": "List legalitas",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{host}}/api/v1/rkab/legalitas",
-					"host": [
-						"{{host}}"
-					],
-					"path": [
-						"api",
-						"v1",
-						"rkab",
-						"legalitas"
-					]
+			"name": "Matrik 1 - legalitas",
+			"item": [
+				{
+					"name": "Get Legalitas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/legalitas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"legalitas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Legalitas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_perusahaan\":\"1\",\r\n    \"id_iup\":\"1\",\r\n    \"luas_project_area\":\"300\",\r\n    \"id_ippkh\":\"1\",\r\n    \"id_pemilik\":\"1\",\r\n    \"id_direksi\":\"1\",\r\n    \"id_rkab\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/legalitas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"legalitas"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			],
+			"description": "Endpoint untuk matrik 1"
 		},
 		{
-			"name": "Create legalitas",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"id_perusahaan\":\"1\",\n    \"id_iup\":\"1\",\n    \"luas_project_area\":\"300Ha\",\n    \"id_ippkh\":\"1\",\n    \"id_pemilik\":\"1\",\n    \"id_direksi\":\"1\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "Matrik 2a - Hasil Kegiatan Eksplorasi",
+			"item": [
+				{
+					"name": "Get Hasil Kegiatan Eksplorasi",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"uuid": "def77d52-ff46-4416-8573-5a89ef91853e"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/rkab-hasil-kegiatan-eksplorasi",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"rkab-hasil-kegiatan-eksplorasi"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "{{host}}/api/v1/rkab/legalitas",
-					"host": [
-						"{{host}}"
-					],
-					"path": [
-						"api",
-						"v1",
-						"rkab",
-						"legalitas"
-					]
+				{
+					"name": "Store Hasil Kegiatan Eksplorasi",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"id_blok\": 1,\r\n    \"status_eksplorasi_blok\": \"sudah\",\r\n    \"jenis_studi_indraja\": null,\r\n    \"luas_studi_indraja\": null,\r\n    \"jenis_pemetaan\": null,\r\n    \"luas_pemetaan\": null,\r\n    \"jenis_geokimia\": null,\r\n    \"jumlah_geokimia\": null,\r\n    \"luas_geokimia\": null,\r\n    \"jenis_geofisika\": null,\r\n    \"luas_geofisika\": null,\r\n    \"kedalaman_sumur_uji\": null,\r\n    \"luas_sumur_uji\": null,\r\n    \"jenis_parit_uji\": null,\r\n    \"luas_parit_uji\": null,\r\n    \"spasi_pengeboran\": null,\r\n    \"jumlah_pengeboran\": null,\r\n    \"kedalaman_pengeboran\": null,\r\n    \"jenis_analisa\": null,\r\n    \"jenis_conto\": null,\r\n    \"jumlah_analisis_conto\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/rkab-hasil-kegiatan-eksplorasi",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"rkab-hasil-kegiatan-eksplorasi"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			],
+			"description": "Endpoint untuk matrik 2a (Rekapitulasi Hasil Kegiatan Eksplorasi sampai Tahun N-1)"
+		},
+		{
+			"name": "Matrik 2b - Rencana Realisasi Eksplorasi",
+			"item": [
+				{
+					"name": "Get Rencana Realisasi Eksplorasi Tahun N",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/rkab-rencanarealisasi-eksplorasi/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"rkab-rencanarealisasi-eksplorasi",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Rencana Realisasi Eksplorasi",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"satuan\": \"biji\",\r\n    \"lokasi_kegiatan\": \"blok oooo\",\r\n    \"kegiatan\": \"abc\",\r\n    \"biaya_satuan_rencana_n-1\": 1000,\r\n    \"kegiatan_rencana_n-1\": null,\r\n    \"biaya_rencana_n-1\": null,\r\n    \"biaya_satuan_realisasi_n-1\": null,\r\n    \"kegiatan_realisasi_n-1\": null,\r\n    \"biaya_realisasi_n-1\": null,\r\n    \"biaya_satuan_rencana_n\": null,\r\n    \"kegiatan_rencana_n\": null,\r\n    \"biaya_rencana_n\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/rkab-rencanarealisasi-eksplorasi",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"rkab-rencanarealisasi-eksplorasi"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoint untuk matrik 2b (Rencana dan Realisasi Kegiatan Eksplorasi Tahun N-1 dan Rencana Tahun N)"
+		},
+		{
+			"name": "Matrik 2c - Biaya Eksplorasi",
+			"item": [
+				{
+					"name": "Get Biaya Eksplorasi",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/rkab-biaya-eksplorasi",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"rkab-biaya-eksplorasi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Biaya Eksplorasi",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"keterangan\": \"Pemetaan topografi\",\r\n    \"tipe\": \"langsung\", //tipe: \"langsung\", \"tidak-langsung\"\r\n    \"rencana_n-1\": 100,\r\n    \"realisasi_n-1\": 100,\r\n    \"rencana_n\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/rkab-biaya-eksplorasi",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"rkab-biaya-eksplorasi"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoint untuk matrik 2c"
+		},
+		{
+			"name": "Matrik 12",
+			"item": [
+				{
+					"name": "Get Rencana Realisasi TK",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "f3d7a3b1-3211-44b4-ac1e-c7bcee0e85ee"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-tenaga-kerja",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-tenaga-kerja"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Rencana Realisasi TK By RKAB",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "f3d7a3b1-3211-44b4-ac1e-c7bcee0e85ee"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-tenaga-kerja/rkab/:id_rkab",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-tenaga-kerja",
+								"rkab",
+								":id_rkab"
+							],
+							"variable": [
+								{
+									"key": "id_rkab",
+									"value": "1",
+									"description": "ID Rkab"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Rencana Realisasi TK By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "f3d7a3b1-3211-44b4-ac1e-c7bcee0e85ee"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-tenaga-kerja/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-tenaga-kerja",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Rencana Realisasi TK",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "f3801f0d-87bf-42d2-af66-532f74f02d95"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"klasifikasi_jabatan\": \"Total TK JasaPenunjang\",\r\n    \"jenis_tki\": 1, //1 Lokal, 0 non lokal\r\n    \"total_tki\": 100,\r\n    \"tka\": 100,\r\n    \"no_rptka\": 123214,\r\n    \"nama_tk_pendamping\": \"ABCD\", //tk = Tenaga Kerja\r\n    \"gender\": \"L\",\r\n    \"jenis_metrik\": \"rencana_n-1\" //rencana_n-1, realisasi_n-1, rencana_n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-tenaga-kerja",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-tenaga-kerja"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Rencana Realisasi TK",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "f3801f0d-87bf-42d2-af66-532f74f02d95"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"klasifikasi_jabatan\": \"Teknis edit\",\r\n    \"jenis_tki\": 1, //1 Lokal, 0 non lokal\r\n    \"total_tki\": 100,\r\n    \"tka\": 100,\r\n    \"no_rptka\": 123214,\r\n    \"nama_tk_pendamping\": \"ABCD\", //tk = Tenaga Kerja\r\n    \"gender\": \"L\",\r\n    \"jenis_metrik\": \"rencana_n-1\" //rencana_n-1, realisasi_n-1, rencana_n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-tenaga-kerja/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-tenaga-kerja",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Rencana Realisasi TK",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "f3801f0d-87bf-42d2-af66-532f74f02d95"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"klasifikasi_jabatan\": \"Teknis edit\",\r\n    \"jenis_tki\": 1, //1 Lokal, 0 non lokal\r\n    \"total_tki\": 100,\r\n    \"tka\": 100,\r\n    \"no_rptka\": 123214,\r\n    \"nama_tk_pendamping\": \"ABCD\", //tk = Tenaga Kerja\r\n    \"gender\": \"L\",\r\n    \"jenis_metrik\": \"rencana_n-1\" //rencana_n-1, realisasi_n-1, rencana_n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-tenaga-kerja/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-tenaga-kerja",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoint untuk matriks 12"
+		},
+		{
+			"name": "Matrik 13a",
+			"item": [
+				{
+					"name": "Get Pelatihan Tenaga Kerja",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "323d8d80-8ede-4940-8fb4-da271bbccd61"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-pelatihan-tenaga-kerja",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-pelatihan-tenaga-kerja"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pelatihan Tenaga Kerja By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "323d8d80-8ede-4940-8fb4-da271bbccd61"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-pelatihan-tenaga-kerja/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-pelatihan-tenaga-kerja",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Pelatihan Tenaga Kerja By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "323d8d80-8ede-4940-8fb4-da271bbccd61"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-pelatihan-tenaga-kerja/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-pelatihan-tenaga-kerja",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pelatihan Tenaga Kerja By RKAB",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "323d8d80-8ede-4940-8fb4-da271bbccd61"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-pelatihan-tenaga-kerja/rkab/:id_rkab",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-pelatihan-tenaga-kerja",
+								"rkab",
+								":id_rkab"
+							],
+							"variable": [
+								{
+									"key": "id_rkab",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Pelatihan Tenaga Kerja",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "128d9b00-bde0-4c84-950a-8cfe96511d3e"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"tahun\": 2024,\r\n    \"nama_pelatihan\": \"pelatihan k3\",\r\n    \"jumlah_peserta\": 100,\r\n    \"biaya_pelatihan\": 100000,\r\n    \"jenis_metrik\": \"rencana_n-1\" //rencana_n-1, realisasi_n-1, rencana_n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-pelatihan-tenaga-kerja",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-pelatihan-tenaga-kerja"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Pelatihan Tenaga Kerja",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "128d9b00-bde0-4c84-950a-8cfe96511d3e"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"tahun\": 2024,\r\n    \"nama_pelatihan\": \"pelatihan k3 edit\",\r\n    \"jumlah_peserta\": 100,\r\n    \"biaya_pelatihan\": 100000,\r\n    \"jenis_metrik\": \"rencana_n-1\" //rencana_n-1, realisasi_n-1, rencana_n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-pelatihan-tenaga-kerja/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-pelatihan-tenaga-kerja",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoint untuk matriks 13a"
+		},
+		{
+			"name": "Matrik 13b",
+			"item": [
+				{
+					"name": "Get Rencana Penggunaan TKA",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "133a9ccd-f584-42f2-8283-05198d207fbf"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-rencana-tka",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-rencana-tka"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Rencana Penggunaan TKA By RKAB",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "133a9ccd-f584-42f2-8283-05198d207fbf"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-rencana-tka/rkab/:id_rkab",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-rencana-tka",
+								"rkab",
+								":id_rkab"
+							],
+							"variable": [
+								{
+									"key": "id_rkab",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Rencana Penggunaan TKA By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "133a9ccd-f584-42f2-8283-05198d207fbf"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-rencana-tka/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-rencana-tka",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Rencana Penggunaan TKA By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "133a9ccd-f584-42f2-8283-05198d207fbf"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-rencana-tka",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-rencana-tka"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Rencana Penggunaan TKA",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "bfd114fb-34a9-4595-b802-3fd084ad4ec4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"jabatan\": \"Teknisi\",\r\n    \"status\": 0, //0: baru, 1: perpanjang\r\n    \"jumlah_tka\": 100,\r\n    \"jangka_waktu\": 12,\r\n    \"lokasi_kerja\": \"Provinsi DIY\",\r\n    \"komitmen_penggantian\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-rencana-tka",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-rencana-tka"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Rencana Penggunaan TKA",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "bfd114fb-34a9-4595-b802-3fd084ad4ec4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"jabatan\": \"Teknisi edit\",\r\n    \"status\": 0, //0: baru, 1: perpanjang\r\n    \"jumlah_tka\": 100,\r\n    \"jangka_waktu\": 12,\r\n    \"lokasi_kerja\": \"Provinsi DIY\",\r\n    \"komitmen_penggantian\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-rencana-tka/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-rencana-tka",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoint untuk matrik 13b"
+		},
+		{
+			"name": "Matrik 14",
+			"item": [
+				{
+					"name": "Get Angka Pengenalan Importir Produsen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-angka-importir",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-angka-importir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Angka Pengenalan Importir Produsen By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-angka-importir/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-angka-importir",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Angka Pengenalan Importir Produsen By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-angka-importir/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-angka-importir",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Angka Pengenalan Importir Produsen By RKAB",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-angka-importir/rkab/:id_rkab",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-angka-importir",
+								"rkab",
+								":id_rkab"
+							],
+							"variable": [
+								{
+									"key": "id_rkab",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Angka Pengenalan Importir Produsen",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "32c43dec-9d7d-4847-b3aa-353b71c50e28"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"keterangan\": \"Nama Perusahaan\",\r\n    \"awal\": \"PT Timah\",\r\n    \"perubahan\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-angka-importir",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-angka-importir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Angka Pengenalan Importir Produsen",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "32c43dec-9d7d-4847-b3aa-353b71c50e28"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"keterangan\": \"Nama Perusahaan edit\",\r\n    \"awal\": \"PT Timah\",\r\n    \"perubahan\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-angka-importir/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-angka-importir",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoint untuk matrik 14"
+		},
+		{
+			"name": "Matrik 15",
+			"item": [
+				{
+					"name": "Get Laporan Neraca Keuangan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-neraca-keuangan",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-neraca-keuangan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Laporan Neraca Keuangan By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-neraca-keuangan/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-neraca-keuangan",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Laporan Neraca Keuangan By RKAB",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-neraca-keuangan/rkab/:id_rkab",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-neraca-keuangan",
+								"rkab",
+								":id_rkab"
+							],
+							"variable": [
+								{
+									"key": "id_rkab",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Laporan Neraca Keuangan By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-neraca-keuangan/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-neraca-keuangan",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Laporan Neraca Keuangan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"uraian\": \"Aktiva Lancar\",\r\n    \"rencana_n-1\": 100, //n = tahun, ex: n-1 = 2024-1 = 2023\r\n    \"realisasi_n-1\": 90,\r\n    \"prakiraan_realisasi_n-1\": 100,\r\n    \"rencana_n\": 110\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-neraca-keuangan",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-neraca-keuangan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Laporan Neraca Keuangan",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"uraian\": \"Aktiva Lancar\",\r\n    \"rencana_n-1\": 100, //n = tahun, ex: n-1 = 2024-1 = 2023\r\n    \"realisasi_n-1\": 90,\r\n    \"prakiraan_realisasi_n-1\": 100,\r\n    \"rencana_n\": 110\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-neraca-keuangan/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-neraca-keuangan",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoint untuk matrik 15"
+		},
+		{
+			"name": "Matrik 16",
+			"item": [
+				{
+					"name": "Get Laporan Laba Rugi",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "a59714ab-9e7b-4bb2-b19e-f8173b479c44"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-laporan-laba-rugi",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-laporan-laba-rugi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Laporan Laba Rugi By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "a59714ab-9e7b-4bb2-b19e-f8173b479c44"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-laporan-laba-rugi/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-laporan-laba-rugi",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Laporan Laba Rugi By RKAB",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "a59714ab-9e7b-4bb2-b19e-f8173b479c44"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-laporan-laba-rugi/rkab/:id_rkab",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-laporan-laba-rugi",
+								"rkab",
+								":id_rkab"
+							],
+							"variable": [
+								{
+									"key": "id_rkab",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Laporan Laba Rugi Copy 3",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "a59714ab-9e7b-4bb2-b19e-f8173b479c44"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-laporan-laba-rugi",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-laporan-laba-rugi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Laporan Laba Rugi",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "ae9a25c0-72ab-4bc5-b371-26e7a31b38cf"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"uraian\": \"Produksi\",\r\n    \"satuan\": \"Ton\",\r\n    \"rencana_n-1\": 1000,\r\n    \"analisis_rencana_n-1\": 1000,\r\n    \"realisasi_n-1\": 990,\r\n    \"analisis_realisasi_n-1\": 999,\r\n    \"prakiraan_realisasi_n-1\": 999,\r\n    \"analisis_prakiraan_realisasi_n-1\": 1000,\r\n    \"rencana_n\": 1100,\r\n    \"analisis_rencana_n\": 1110,\r\n    \"persen_prakiraan_rencana_n-1\": 99,\r\n    \"persen_rencana_n\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-laporan-laba-rugi",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-laporan-laba-rugi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Laporan Laba Rugi",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "ae9a25c0-72ab-4bc5-b371-26e7a31b38cf"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"uraian\": \"Produksi\",\r\n    \"satuan\": \"Ton\",\r\n    \"rencana_n-1\": 1000,\r\n    \"analisis_rencana_n-1\": 1000,\r\n    \"realisasi_n-1\": 990,\r\n    \"analisis_realisasi_n-1\": 999,\r\n    \"prakiraan_realisasi_n-1\": 999,\r\n    \"analisis_prakiraan_realisasi_n-1\": 1000,\r\n    \"rencana_n\": 1100,\r\n    \"analisis_rencana_n\": 1110,\r\n    \"persen_prakiraan_rencana_n-1\": 99,\r\n    \"persen_rencana_n\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-laporan-laba-rugi/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-laporan-laba-rugi",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Matrik 17",
+			"item": [
+				{
+					"name": "Get Laporan Arus Kas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-laporan-arus-kas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-laporan-arus-kas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Laporan Arus Kas By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-laporan-arus-kas/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-laporan-arus-kas",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Laporan Arus Kas By RKAB",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-laporan-arus-kas/rkab/:id_rkab",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-laporan-arus-kas",
+								"rkab",
+								":id_rkab"
+							],
+							"variable": [
+								{
+									"key": "id_rkab",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Laporan Arus Kas",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-laporan-arus-kas/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-laporan-arus-kas",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Laporan Arus Kas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "afc38ed8-bb02-469a-9a04-6222b5e4dc6b"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"tahun\": 2024,\r\n    \"uraian\": \"Laba (Rugi) Bersih tahun berjalan\",\r\n    \"rencana_n-1\": null,\r\n    \"realisasi_n-1\": null,\r\n    \"prakiraan_realisasi_n-1\": null,\r\n    \"rencana_n\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-laporan-arus-kas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-laporan-arus-kas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Laporan Arus Kas",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "afc38ed8-bb02-469a-9a04-6222b5e4dc6b"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"tahun\": 2024,\r\n    \"uraian\": \"Laba (Rugi) Bersih tahun berjalan\",\r\n    \"rencana_n-1\": null,\r\n    \"realisasi_n-1\": null,\r\n    \"prakiraan_realisasi_n-1\": null,\r\n    \"rencana_n\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-laporan-arus-kas/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-laporan-arus-kas",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoint untuk matrik 17"
+		},
+		{
+			"name": "Matrik 18",
+			"item": [
+				{
+					"name": "Get Laporan Penerimaan Negara",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-penerimaan-negara",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-penerimaan-negara"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Laporan Penerimaan Negara By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-penerimaan-negara/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-penerimaan-negara",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Laporan Penerimaan Negara By RKAB",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-penerimaan-negara/rkab/:id_rkab",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-penerimaan-negara",
+								"rkab",
+								":id_rkab"
+							],
+							"variable": [
+								{
+									"key": "id_rkab",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Laporan Penerimaan Negara",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-penerimaan-negara/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-penerimaan-negara",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Penerimaan Negara",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "63cd61a9-e494-4400-853e-ee6e60a5bace"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"tahun\": 2024,\r\n    \"uraian\": \"PPH Pasal 21\",\r\n    \"tipe\": \"pajak\", //pajak, non-pajak, investasi\r\n    \"rencana_n-1\": 1,\r\n    \"realisasi_n-1\": 1,\r\n    \"prakiraan_realisasi_n-1\": 1,\r\n    \"rencana_n\": 1,\r\n    \"persen_prakiraan_rencana_n-1\": 1,\r\n    \"persen_rencana_n\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-penerimaan-negara",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-penerimaan-negara"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Penerimaan Negara",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"uuid": "63cd61a9-e494-4400-853e-ee6e60a5bace"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"tahun\": 2024,\r\n    \"uraian\": \"PPH Pasal 21\",\r\n    \"tipe\": \"pajak\", //pajak, non-pajak, investasi\r\n    \"rencana_n-1\": 1,\r\n    \"realisasi_n-1\": 1,\r\n    \"prakiraan_realisasi_n-1\": 1,\r\n    \"rencana_n\": 1,\r\n    \"persen_prakiraan_rencana_n-1\": 1,\r\n    \"persen_rencana_n\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-penerimaan-negara/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-penerimaan-negara",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoint untuk matrik 18 dan 19"
 		},
 		{
 			"name": "Profile Perusahaan",
