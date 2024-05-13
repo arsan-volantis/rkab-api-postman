@@ -237,7 +237,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id_blok\":\"1\",\n    \"nama_pit\":\"Pit 2 edit\"\n}",
+							"raw": "{\n    \"id_blok\":\"1\",\n    \"nama_pit\":\"Pit 1 edit\",\n    \"luas_pit\":\"15\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -274,7 +274,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id_blok\":\"2\",\n    \"nama_pit\":\"Pit 3\"\n}\n",
+							"raw": "{\n    \"id_blok\":\"1\",\n    \"nama_pit\":\"Pit 2\",\n    \"luas_pit\":20\n}\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -325,7 +325,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "2",
+									"value": "1",
 									"description": "ID Pit Blok"
 								}
 							]
@@ -410,7 +410,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "2",
+									"value": "1",
 									"description": "ID Pit Blok"
 								}
 							]
@@ -472,13 +472,71 @@
 					"response": []
 				},
 				{
+					"name": "Pengajuan By Kode Perusahaan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/pengajuan/perusahaan/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"pengajuan",
+								"perusahaan",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1002",
+									"description": "Kode Perusahaan"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pengajuan By Status RKAB",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/pengajuan/status/:status",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"pengajuan",
+								"status",
+								":status"
+							],
+							"variable": [
+								{
+									"key": "status",
+									"value": "",
+									"description": "Status RKAB"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Create Pengajuan",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"kode_perusahaan\": 1001,\n    \"nomor_iup\": \"164 TAHUN 2014\",\n    \"tahun_pengajuan\": 2024,\n    \"jenis_tahapan\": \"explorasi\",\n    \"status\": \"draft\",\n    \"mata_uang\": \"rupiah\"\n}",
+							"raw": "{\n    \"kode_perusahaan\": 1001,\n    \"nomor_iup\": \"72/1/IUP/PMDN/2020\",\n    \"tahun_pengajuan\": 2024,\n    \"jenis_tahapan\": \"explorasi\",\n    \"status\": \"draft\",\n    \"mata_uang\": \"rupiah\",\n    \"nomor_rkab\": \"12982\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
