@@ -7,6 +7,60 @@
 	},
 	"item": [
 		{
+			"name": "sys-logger",
+			"item": [
+				{
+					"name": "Save Activity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"test\",\n    \"nomor_iup\":\"123\",\n    \"aktifitas\":\"Test Aktifitas\",\n    \"status_aktifitas\":\"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/sys-logger",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"sys-logger"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Activity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/sys-logger",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"sys-logger"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "blok-iup",
 			"item": [
 				{
@@ -53,7 +107,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id_iup\":\"1\",\n    \"nama_blok\":\"Blok 3\",\n    \"luas_blok\":\"5\"\n}\n",
+							"raw": "{\n    \"id_iup\":\"677788125996652513\",\n    \"nama_blok\":\"Blok 2\",\n    \"luas_blok\":\"20\"\n}\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -274,7 +328,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id_blok\":\"1\",\n    \"nama_pit\":\"Pit 2\",\n    \"luas_pit\":20\n}\n",
+							"raw": "{\n    \"id_blok\":\"677793677980079388\",\n    \"nama_pit\":\"Pit 1\",\n    \"luas_pit\":20\n}\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -463,7 +517,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "1",
+									"value": "677781475801832512",
 									"description": "ID Rkab Pengajuan"
 								}
 							]
@@ -521,7 +575,7 @@
 							"variable": [
 								{
 									"key": "status",
-									"value": "",
+									"value": "draft",
 									"description": "Status RKAB"
 								}
 							]
@@ -536,7 +590,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"kode_perusahaan\": 1001,\n    \"nomor_iup\": \"72/1/IUP/PMDN/2020\",\n    \"tahun_pengajuan\": 2024,\n    \"jenis_tahapan\": \"explorasi\",\n    \"status\": \"draft\",\n    \"mata_uang\": \"rupiah\",\n    \"nomor_rkab\": \"12982\"\n}",
+							"raw": "{\n    \"kode_perusahaan\": 1001,\n    \"nomor_iup\": \"188.4/263/ESDM/DPMPTSP/2018\",\n    \"tahun_pengajuan\": 2024,\n    \"jenis_tahapan\": \"explorasi\",\n    \"status\": \"draft\",\n    \"mata_uang\": \"rupiah\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -570,7 +624,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id_perusahaan\":\"1\",\n    \"nomor_iup\": \"889493\",\n    \"kode_iup\": \"XII/992\",\n    \"golongan_tambang\": \"1\",\n    \"periode_iup_awal\": \"2024-04-30\",\n    \"periode_iup_akhir\": \"2029-04-30\",\n    \"kpt_nama\": \"Arsan\",\n    \"kpt_nomor_pengesahan\": \"P00392\",\n    \"kpt_tanggal_pengesahan\": \"2024-04-30\",\n    \"luas_wilayah_hk\": \"20\",\n    \"luas_wilayah_hl\": \"20\",\n    \"luas_wilayah_hp\": \"20\",\n    \"luas_wilayah_nonhutan\": \"20\",\n    \"id_komoditas\":\"1\"\n}",
+							"raw": "{\n    \"id_perusahaan\":\"677788115150184382\",\n    \"nomor_iup\": \"889493\",\n    \"kode_wiup\": \"XII/992\",\n    \"golongan_tambang\": \"1\",\n    \"periode_iup_awal\": \"2024-04-30\",\n    \"periode_iup_akhir\": \"2029-04-30\",\n    \"kpt_nama\": \"Arsan\",\n    \"kpt_nomor_pengesahan\": \"P00392\",\n    \"kpt_tanggal_pengesahan\": \"2024-04-30\",\n    \"luas_wilayah_hk\": \"20\",\n    \"luas_wilayah_hl\": \"20\",\n    \"luas_wilayah_hp\": \"20\",\n    \"luas_wilayah_nonhutan\": \"20\",\n    \"id_komoditas\":\"677788118862143432\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -632,7 +686,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "1"
+									"value": "677444677775007472"
 								}
 							]
 						}
@@ -660,7 +714,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "1"
+									"value": "677788125996652513"
 								}
 							]
 						}
@@ -678,11 +732,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/legalitas",
+							"raw": "{{host}}/api/v1/rkab/legalitas",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
+								"api",
+								"v1",
+								"rkab",
 								"legalitas"
 							]
 						}
@@ -696,7 +753,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_perusahaan\":\"1\",\r\n    \"id_iup\":\"1\",\r\n    \"luas_project_area\":\"300\",\r\n    \"id_ippkh\":\"1\",\r\n    \"id_pemilik\":\"1\",\r\n    \"id_direksi\":\"1\",\r\n    \"id_rkab\": \"1\"\r\n}",
+							"raw": "{\r\n    \"id_perusahaan\":\"677520249775591962\",\r\n    \"id_iup\":\"677444677775007472\",\r\n    \"id_rkab\":\"677781475801832512\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -704,11 +761,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/legalitas",
+							"raw": "{{host}}/api/v1/rkab/legalitas",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
+								"api",
+								"v1",
+								"rkab",
 								"legalitas"
 							]
 						}
@@ -733,11 +793,14 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}/rkab-hasil-kegiatan-eksplorasi",
+							"raw": "{{host}}/api/v1/rkab/rkab-hasil-kegiatan-eksplorasi",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
+								"api",
+								"v1",
+								"rkab",
 								"rkab-hasil-kegiatan-eksplorasi"
 							]
 						}
@@ -751,7 +814,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"id_blok\": 1,\r\n    \"status_eksplorasi_blok\": \"sudah\",\r\n    \"jenis_studi_indraja\": null,\r\n    \"luas_studi_indraja\": null,\r\n    \"jenis_pemetaan\": null,\r\n    \"luas_pemetaan\": null,\r\n    \"jenis_geokimia\": null,\r\n    \"jumlah_geokimia\": null,\r\n    \"luas_geokimia\": null,\r\n    \"jenis_geofisika\": null,\r\n    \"luas_geofisika\": null,\r\n    \"kedalaman_sumur_uji\": null,\r\n    \"luas_sumur_uji\": null,\r\n    \"jenis_parit_uji\": null,\r\n    \"luas_parit_uji\": null,\r\n    \"spasi_pengeboran\": null,\r\n    \"jumlah_pengeboran\": null,\r\n    \"kedalaman_pengeboran\": null,\r\n    \"jenis_analisa\": null,\r\n    \"jenis_conto\": null,\r\n    \"jumlah_analisis_conto\": null\r\n}",
+							"raw": "{\r\n    \"id_rkab\": \"677520394135148888\",\r\n    \"kode_perusahaan\": 1001,\r\n    \"id_blok\": \"677522326123847230\",\r\n    \"status_eksplorasi_blok\": \"sudah\",\r\n    \"jenis_studi_indraja\": null,\r\n    \"luas_studi_indraja\": null,\r\n    \"jenis_pemetaan\": null,\r\n    \"luas_pemetaan\": null,\r\n    \"jenis_geokimia\": null,\r\n    \"jumlah_geokimia\": null,\r\n    \"luas_geokimia\": null,\r\n    \"jenis_geofisika\": null,\r\n    \"luas_geofisika\": null,\r\n    \"kedalaman_sumur_uji\": null,\r\n    \"luas_sumur_uji\": null,\r\n    \"jenis_parit_uji\": null,\r\n    \"luas_parit_uji\": null,\r\n    \"spasi_pengeboran\": null,\r\n    \"jumlah_pengeboran\": null,\r\n    \"kedalaman_pengeboran\": null,\r\n    \"jenis_analisa\": null,\r\n    \"jenis_conto\": null,\r\n    \"jumlah_analisis_conto\": null\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -759,11 +822,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/rkab-hasil-kegiatan-eksplorasi",
+							"raw": "{{host}}/api/v1/rkab/rkab-hasil-kegiatan-eksplorasi",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
+								"api",
+								"v1",
+								"rkab",
 								"rkab-hasil-kegiatan-eksplorasi"
 							]
 						}
@@ -782,19 +848,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/rkab-rencanarealisasi-eksplorasi/:id",
+							"raw": "{{host}}/api/v1/rkab/rkab-rencanarealisasi-eksplorasi",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
-								"rkab-rencanarealisasi-eksplorasi",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "1"
-								}
+								"api",
+								"v1",
+								"rkab",
+								"rkab-rencanarealisasi-eksplorasi"
 							]
 						}
 					},
@@ -807,7 +869,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"satuan\": \"biji\",\r\n    \"lokasi_kegiatan\": \"blok oooo\",\r\n    \"kegiatan\": \"abc\",\r\n    \"biaya_satuan_rencana_n-1\": 1000,\r\n    \"kegiatan_rencana_n-1\": null,\r\n    \"biaya_rencana_n-1\": null,\r\n    \"biaya_satuan_realisasi_n-1\": null,\r\n    \"kegiatan_realisasi_n-1\": null,\r\n    \"biaya_realisasi_n-1\": null,\r\n    \"biaya_satuan_rencana_n\": null,\r\n    \"kegiatan_rencana_n\": null,\r\n    \"biaya_rencana_n\": null\r\n}",
+							"raw": "{\r\n    \"id_rkab\": \"677520394135148888\",\r\n    \"kode_perusahaan\": 1001,\r\n    \"satuan\": \"biji\",\r\n    \"lokasi_kegiatan\": \"blok oooo\",\r\n    \"kegiatan\": \"abc\",\r\n    \"biaya_satuan_rencana_n-1\": 1000,\r\n    \"kegiatan_rencana_n-1\": null,\r\n    \"biaya_rencana_n-1\": null,\r\n    \"biaya_satuan_realisasi_n-1\": null,\r\n    \"kegiatan_realisasi_n-1\": null,\r\n    \"biaya_realisasi_n-1\": null,\r\n    \"biaya_satuan_rencana_n\": null,\r\n    \"kegiatan_rencana_n\": null,\r\n    \"biaya_rencana_n\": null\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -815,11 +877,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/rkab-rencanarealisasi-eksplorasi",
+							"raw": "{{host}}/api/v1/rkab/rkab-rencanarealisasi-eksplorasi",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
+								"api",
+								"v1",
+								"rkab",
 								"rkab-rencanarealisasi-eksplorasi"
 							]
 						}
@@ -838,11 +903,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/rkab-biaya-eksplorasi",
+							"raw": "{{host}}/api/v1/rkab/rkab-biaya-eksplorasi",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
+								"api",
+								"v1",
+								"rkab",
 								"rkab-biaya-eksplorasi"
 							]
 						}
@@ -856,7 +924,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"keterangan\": \"Pemetaan topografi\",\r\n    \"tipe\": \"langsung\", //tipe: \"langsung\", \"tidak-langsung\"\r\n    \"rencana_n-1\": 100,\r\n    \"realisasi_n-1\": 100,\r\n    \"rencana_n\": 100\r\n}",
+							"raw": "{\r\n    \"id_rkab\": \"677520394135148888\",\r\n    \"kode_perusahaan\": 1001,\r\n    \"keterangan\": \"Pemetaan topografi\",\r\n    \"tipe\": \"langsung\", //tipe: \"langsung\", \"tidak-langsung\"\r\n    \"rencana_n-1\": 100,\r\n    \"realisasi_n-1\": 100,\r\n    \"rencana_n\": 100\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -864,11 +932,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/rkab-biaya-eksplorasi",
+							"raw": "{{host}}/api/v1/rkab/rkab-biaya-eksplorasi",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
+								"api",
+								"v1",
+								"rkab",
 								"rkab-biaya-eksplorasi"
 							]
 						}
@@ -877,6 +948,223 @@
 				}
 			],
 			"description": "Endpoint untuk matrik 2c"
+		},
+		{
+			"name": "Matrik 3",
+			"item": [
+				{
+					"name": "Get Rencana Realisasi Peralatan Eksplorasi",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-peralatan-eksplorasi",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-peralatan-eksplorasi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Rencana Realisasi Peralatan Eksplorasi",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": \"677520394135148888\",\r\n    \"kode_perusahaan\": 1001,\r\n    \"jenis_peralatan\": \"Cangkul\",\r\n    \"tipe\": \"ringan\",\r\n    \"rencana_n-1\": 100,\r\n    \"realisasi_n-1\": 100,\r\n    \"rencana_n\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-peralatan-eksplorasi",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-peralatan-eksplorasi"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Matrik 4",
+			"item": [
+				{
+					"name": "Get Estimasi Sumber Daya dan Cadangan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{minerba-rkab}}/rkab-sumber-daya-cadangan/1",
+							"host": [
+								"{{minerba-rkab}}"
+							],
+							"path": [
+								"rkab-sumber-daya-cadangan",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Estimasi Sumber Daya Cadangan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": \"677520394135148888\",\r\n    \"kode_perusahaan\": 1001,\r\n    \"id_blok\": \"677522326123847230\",\r\n    \"tipe\": \"sumber-daya\", //tipe: \"sumber-daya\", \"cadangan\"\r\n    \"tahun\": 2024,\r\n    \"jenis_material\": \"mineral logam\",\r\n    \"tonase_tereka\": 1,\r\n    \"unsur1_kadar_tereka\": 1,\r\n    \"unsur2_kadar_tereka\": 1,\r\n    \"unsur1_logam_tereka\": 1,\r\n    \"unsur2_logam_tereka\": 1,\r\n    \"tonase_tertunjuk\": null,\r\n    \"unsur1_kadar_tertunjuk\": null,\r\n    \"unsur2_kadar_tertunjuk\": null,\r\n    \"unsur1_logam_tertunjuk\": null,\r\n    \"unsur2_logam_tertunjuk\": null,\r\n    \"tonase_terukur\": null,\r\n    \"unsur1_kadar_terukur\": null,\r\n    \"unsur2_kadar_terukur\": null,\r\n    \"unsur1_logam_terukur\": null,\r\n    \"unsur2_logam_terukur\": null,\r\n    \"tonase_terbukti\": 2,\r\n    \"unsur1_kadar_terbukti\": 2,\r\n    \"unsur2_kadar_terbukti\": 2,\r\n    \"unsur1_logam_terbukti\": 2,\r\n    \"unsur2_logam_terbukti\": 2,\r\n    \"luas\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-sumber-daya-cadangan",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-sumber-daya-cadangan"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoint untuk matrik 4"
+		},
+		{
+			"name": "Matrik 5",
+			"item": [
+				{
+					"name": "Get Pemantauan dan Pengelolaan Lingkungan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-kelola-pantau-lingkungan",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-kelola-pantau-lingkungan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Pengelolaan dan Pemantauan Lingkungan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": \"677520394135148888\",\r\n    \"kode_perusahaan\": 1001,\r\n    \"jenis_kegiatan\": \"pengelolaan\", //jenis: \"pengelolaan\", \"pemantauan\"\r\n    \"code\": null,\r\n    \"kegiatan\": \"Pengelolaan kualitas air\",\r\n    \"realisasi_tri_1\": 1,\r\n    \"realisasi_tri_2\": 1,\r\n    \"realisasi_tri_3\": 1,\r\n    \"realisasi_tri_4\": 1,\r\n    \"rencana_tri_1\": 1,\r\n    \"rencana_tri_2\": 1,\r\n    \"rencana_tri_3\": 1,\r\n    \"rencana_tri_4\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-kelola-pantau-lingkungan",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-kelola-pantau-lingkungan"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoint untuk matrik 5"
+		},
+		{
+			"name": "Matrik 6",
+			"item": [
+				{
+					"name": "Get Pengelolaan dan Pemantauan Laut",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-kelola-pantau-laut",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-kelola-pantau-laut"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Pengelolaan dan Pemantauan Laut",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_rkab\": \"677520394135148888\",\r\n    \"kode_perusahaan\": 1001,\r\n    \"kegiatan\": \"Pengelolaan kualitas air laut\",\r\n    \"rencana_reklamasi_n-1\": 1,\r\n    \"rencana_n-1\": 1,\r\n    \"rencana_rkab_n-1\":1,\r\n    \"realisasi_n-1\": 1,\r\n    \"realisasi_rkab_n-1\":1,\r\n    \"kumulatif_reklamasi\": 3,\r\n    \"rencana_reklamasi_n\": 4,\r\n    \"rencana_rkab_tri1\": 1,\r\n    \"rencana_rkab_tri2\": 1,\r\n    \"rencana_rkab_tri3\": 1,\r\n    \"rencana_rkab_tri4\": 2,\r\n    \"total_rencana_n\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/rkab/rkab-kelola-pantau-laut",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rkab",
+								"rkab-kelola-pantau-laut"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoint untuk matrik 6"
 		},
 		{
 			"name": "Matrik 12",
@@ -936,7 +1224,7 @@
 							"variable": [
 								{
 									"key": "id_rkab",
-									"value": "1",
+									"value": "677520394135148888",
 									"description": "ID Rkab"
 								}
 							]
@@ -971,7 +1259,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "2"
+									"value": "677534471360222896"
 								}
 							]
 						}
@@ -992,7 +1280,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"klasifikasi_jabatan\": \"Total TK JasaPenunjang\",\r\n    \"jenis_tki\": 1, //1 Lokal, 0 non lokal\r\n    \"total_tki\": 100,\r\n    \"tka\": 100,\r\n    \"no_rptka\": 123214,\r\n    \"nama_tk_pendamping\": \"ABCD\", //tk = Tenaga Kerja\r\n    \"gender\": \"L\",\r\n    \"jenis_metrik\": \"rencana_n-1\" //rencana_n-1, realisasi_n-1, rencana_n\r\n}",
+							"raw": "{\r\n    \"id_rkab\": \"677520394135148888\",\r\n    \"kode_perusahaan\": 1001,\r\n    \"klasifikasi_jabatan\": \"Total TK JasaPenunjang\",\r\n    \"jenis_tki\": 1, //1 Lokal, 0 non lokal\r\n    \"total_tki\": 100,\r\n    \"tka\": 100,\r\n    \"no_rptka\": 123214,\r\n    \"nama_tk_pendamping\": \"ABCD\", //tk = Tenaga Kerja\r\n    \"gender\": \"L\",\r\n    \"jenis_metrik\": \"rencana_n-1\" //rencana_n-1, realisasi_n-1, rencana_n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1160,7 +1448,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "1"
+									"value": "677535491473676165"
 								}
 							]
 						}
@@ -1229,7 +1517,7 @@
 							"variable": [
 								{
 									"key": "id_rkab",
-									"value": "1"
+									"value": "677520394135148888"
 								}
 							]
 						}
@@ -1250,7 +1538,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"tahun\": 2024,\r\n    \"nama_pelatihan\": \"pelatihan k3\",\r\n    \"jumlah_peserta\": 100,\r\n    \"biaya_pelatihan\": 100000,\r\n    \"jenis_metrik\": \"rencana_n-1\" //rencana_n-1, realisasi_n-1, rencana_n\r\n}",
+							"raw": "{\r\n    \"id_rkab\": \"677520394135148888\",\r\n    \"kode_perusahaan\": 1001,\r\n    \"tahun\": 2024,\r\n    \"nama_pelatihan\": \"pelatihan k3\",\r\n    \"jumlah_peserta\": 100,\r\n    \"biaya_pelatihan\": 100000,\r\n    \"jenis_metrik\": \"rencana_n-1\" //rencana_n-1, realisasi_n-1, rencana_n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1458,7 +1746,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"jabatan\": \"Teknisi\",\r\n    \"status\": 0, //0: baru, 1: perpanjang\r\n    \"jumlah_tka\": 100,\r\n    \"jangka_waktu\": 12,\r\n    \"lokasi_kerja\": \"Provinsi DIY\",\r\n    \"komitmen_penggantian\": 1\r\n}",
+							"raw": "{\r\n    \"id_rkab\": \"677520394135148888\",\r\n    \"kode_perusahaan\": 1001,\r\n    \"jabatan\": \"Teknisi\",\r\n    \"status\": 0, //0: baru, 1: perpanjang\r\n    \"jumlah_tka\": 100,\r\n    \"jangka_waktu\": 12,\r\n    \"lokasi_kerja\": \"Provinsi DIY\",\r\n    \"komitmen_penggantian\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1569,7 +1857,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "1"
+									"value": "677699939312211403"
 								}
 							]
 						}
@@ -1624,7 +1912,7 @@
 							"variable": [
 								{
 									"key": "id_rkab",
-									"value": "1"
+									"value": "677520394135148888"
 								}
 							]
 						}
@@ -1645,7 +1933,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"keterangan\": \"Nama Perusahaan\",\r\n    \"awal\": \"PT Timah\",\r\n    \"perubahan\": null\r\n}",
+							"raw": "{\r\n    \"id_rkab\": \"677520394135148888\",\r\n    \"kode_perusahaan\": 1001,\r\n    \"keterangan\": \"Nama Perusahaan\",\r\n    \"awal\": \"PT Timah\",\r\n    \"perubahan\": null\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1825,7 +2113,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"uraian\": \"Aktiva Lancar\",\r\n    \"rencana_n-1\": 100, //n = tahun, ex: n-1 = 2024-1 = 2023\r\n    \"realisasi_n-1\": 90,\r\n    \"prakiraan_realisasi_n-1\": 100,\r\n    \"rencana_n\": 110\r\n}",
+							"raw": "{\r\n    \"id_rkab\": \"677520394135148888\",\r\n    \"kode_perusahaan\": 1001,\r\n    \"uraian\": \"Aktiva Lancar\",\r\n    \"rencana_n-1\": 100, //n = tahun, ex: n-1 = 2024-1 = 2023\r\n    \"realisasi_n-1\": 90,\r\n    \"prakiraan_realisasi_n-1\": 100,\r\n    \"rencana_n\": 110\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2026,7 +2314,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"uraian\": \"Produksi\",\r\n    \"satuan\": \"Ton\",\r\n    \"rencana_n-1\": 1000,\r\n    \"analisis_rencana_n-1\": 1000,\r\n    \"realisasi_n-1\": 990,\r\n    \"analisis_realisasi_n-1\": 999,\r\n    \"prakiraan_realisasi_n-1\": 999,\r\n    \"analisis_prakiraan_realisasi_n-1\": 1000,\r\n    \"rencana_n\": 1100,\r\n    \"analisis_rencana_n\": 1110,\r\n    \"persen_prakiraan_rencana_n-1\": 99,\r\n    \"persen_rencana_n\": 100\r\n}",
+							"raw": "{\r\n    \"id_rkab\": \"677520394135148888\",\r\n    \"kode_perusahaan\": 1001,\r\n    \"uraian\": \"Produksi\",\r\n    \"satuan\": \"Ton\",\r\n    \"rencana_n-1\": 1000,\r\n    \"analisis_rencana_n-1\": 1000,\r\n    \"realisasi_n-1\": 990,\r\n    \"analisis_realisasi_n-1\": 999,\r\n    \"prakiraan_realisasi_n-1\": 999,\r\n    \"analisis_prakiraan_realisasi_n-1\": 1000,\r\n    \"rencana_n\": 1100,\r\n    \"analisis_rencana_n\": 1110,\r\n    \"persen_prakiraan_rencana_n-1\": 99,\r\n    \"persen_rencana_n\": 100\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2212,7 +2500,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"tahun\": 2024,\r\n    \"uraian\": \"Laba (Rugi) Bersih tahun berjalan\",\r\n    \"rencana_n-1\": null,\r\n    \"realisasi_n-1\": null,\r\n    \"prakiraan_realisasi_n-1\": null,\r\n    \"rencana_n\": null\r\n}",
+							"raw": "{\r\n    \"id_rkab\": \"677520394135148888\",\r\n    \"kode_perusahaan\": 1001,\r\n    \"tahun\": 2024,\r\n    \"uraian\": \"Laba (Rugi) Bersih tahun berjalan\",\r\n    \"rencana_n-1\": null,\r\n    \"realisasi_n-1\": null,\r\n    \"prakiraan_realisasi_n-1\": null,\r\n    \"rencana_n\": null\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2399,7 +2687,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_rkab\": 1,\r\n    \"kode_perusahaan\": 1001,\r\n    \"tahun\": 2024,\r\n    \"uraian\": \"PPH Pasal 21\",\r\n    \"tipe\": \"pajak\", //pajak, non-pajak, investasi\r\n    \"rencana_n-1\": 1,\r\n    \"realisasi_n-1\": 1,\r\n    \"prakiraan_realisasi_n-1\": 1,\r\n    \"rencana_n\": 1,\r\n    \"persen_prakiraan_rencana_n-1\": 1,\r\n    \"persen_rencana_n\": 1\r\n}",
+							"raw": "{\r\n    \"id_rkab\": \"677520394135148888\",\r\n    \"kode_perusahaan\": 1001,\r\n    \"tahun\": 2024,\r\n    \"uraian\": \"PPH Pasal 21\",\r\n    \"tipe\": \"pajak\", //pajak, non-pajak, investasi\r\n    \"rencana_n-1\": 1,\r\n    \"realisasi_n-1\": 1,\r\n    \"prakiraan_realisasi_n-1\": 1,\r\n    \"rencana_n\": 1,\r\n    \"persen_prakiraan_rencana_n-1\": 1,\r\n    \"persen_rencana_n\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2487,7 +2775,7 @@
 					"variable": [
 						{
 							"key": "id",
-							"value": "1"
+							"value": "677835551600154374"
 						}
 					]
 				}
